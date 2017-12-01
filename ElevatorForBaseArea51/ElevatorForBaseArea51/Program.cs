@@ -167,17 +167,18 @@ namespace ElevatorForBaseArea51
                 }
 
                 /**
-                 * Output
-                 */ 
-                Console.WriteLine($"Agent {i} goes off the elevator.");
-
-                /**
                  * Release
                  */ 
                 lock (someLock)
                 {
                     semaphore.Release();
                 }
+                
+                 /**
+                 * Output
+                 */ 
+                Console.WriteLine($"Agent {i} goes off the elevator.");
+                
                 initialFloor = dreamFloor;
             }
 
