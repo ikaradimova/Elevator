@@ -94,24 +94,6 @@ namespace ElevatorForBaseArea51
                 }
 
                 /**
-                 * Elevator moving towards the agent
-                 */ 
-                if (initialFloor < currentFloor)
-                {
-                    for (int j = initialFloor; j <= currentFloor; j++)
-                    {
-                        Thread.Sleep(1000);
-                    }
-                }
-                else
-                {
-                    for (int j = initialFloor; j >= currentFloor; j--)
-                    {
-                        Thread.Sleep(1000);
-                    }
-                }
-
-                /**
                  * Output
                  */ 
                 Console.WriteLine();
@@ -141,6 +123,24 @@ namespace ElevatorForBaseArea51
                     } while (dreamFloor == currentFloor);
 
                     Console.WriteLine($"Agent {i} chose new floor: {floors[dreamFloor]}.");
+                }
+                
+                 /**
+                 * Elevator moving towards the agent
+                 */ 
+                if (initialFloor < currentFloor)
+                {
+                    for (int j = initialFloor; j <= currentFloor; j++)
+                    {
+                        Thread.Sleep(1000);
+                    }
+                }
+                else
+                {
+                    for (int j = initialFloor; j >= currentFloor; j--)
+                    {
+                        Thread.Sleep(1000);
+                    }
                 }
 
                 /**
